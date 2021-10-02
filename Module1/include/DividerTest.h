@@ -8,9 +8,9 @@ using namespace ::testing;
 
 class DividerTest: public Test {
 public:
-DividerTest();
-protected:
-Divider divider;
+    DividerTest();
+    Divider divider;
 };
+
 
 #endif //DIVIDER_TEST_H
