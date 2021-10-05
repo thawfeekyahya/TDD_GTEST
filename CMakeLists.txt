@@ -13,20 +13,13 @@ foreach(modules ${MODULES})
 endforeach()
 
 
-set(GTEST_LIBS 
-/usr/local/thyahya/Worksapce/CPP/GTest_CPP/GTestBuild/lib/libgtest.a
-/usr/local/thyahya/Worksapce/CPP/GTest_CPP/GTestBuild/lib/libgtest_main.a
-/usr/local/thyahya/Worksapce/CPP/GTest_CPP/GTestBuild/lib/libgmock.a
-/usr/local/thyahya/Worksapce/CPP/GTest_CPP/GTestBuild/lib/libgmock_main.a
-)
-
 include_directories(
 	${CMAKE_SOURCE_DIR}/GTestBuild/include
 )
 
 find_package(Threads REQUIRED)
 
-find_library(GTEST_BUILD NAMES gtest gtest_main PATHS /usr/local/thyahya/Worksapce/CPP/GTest_CPP/GTestBuild/lib)
+find_library(GTEST_BUILD NAMES gtest gtest_main PATHS ${CMAKE_SOURCE_DIR}/GTestBuild/lib)
 
 
 add_executable(GTest_Test main.cpp)
